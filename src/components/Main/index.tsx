@@ -1,21 +1,9 @@
-import * as S from './styles'
+import { Flex, Text } from '@chakra-ui/react'
 
-const Main = ({
-  title = 'React Avançado',
-  description = 'Typescript, NextJS e Styled Components'
-}) => (
-  <S.Wrapper>
-    <S.Logo
-      src="/img/logo.svg"
-      alt="Imagem de um átomo e React Avançado escrito ao lado."
-    />
-    <S.Title>{title}</S.Title>
-    <S.Description>{description}</S.Description>
-    <S.Illustration
-      src="/img/hero-illustration.svg"
-      alt="Um desenvolvedor de frente para a tela com código."
-    />
-  </S.Wrapper>
+const Main = () => (
+  <Flex w="100vw" h="100vh" align="center" justify="center">
+    <Text as="h1">Hello World</Text>
+  </Flex>
 )
 
 export default Main

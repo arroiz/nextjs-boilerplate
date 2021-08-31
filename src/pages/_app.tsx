@@ -1,7 +1,6 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-
-import GlobalStyles from 'styles/global'
+import { ChakraProvider } from '@chakra-ui/react'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -13,11 +12,12 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/public/manifest.json" />
         <meta
           name="description"
-          content="A simple project starter to work with typescript, react, nextJS and styled-components"
+          content="A simple project starter to work with typescript, react and nextJS"
         />
       </Head>
-      <GlobalStyles />
-      <Component {...pageProps} />
+      <ChakraProvider>
+        <Component {...pageProps} />
+      </ChakraProvider>{' '}
     </>
   )
 }
